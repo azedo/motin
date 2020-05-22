@@ -13,10 +13,8 @@
     "start": "run-p start:react api",
     "start:react": "react-scripts start",
     "build": "react-scripts build",
-    "test:i": "react-scripts test",
     "eject": "react-scripts eject",
     "api": "cross-env NODE_ENV=testing ARC_LOCAL=1 npx sandbox",
-    "test": "cross-env NODE_ENV=testing PORT=6666 tape test/*-test.js ./test/**/*-test.js | tap-spec",
     "serve": "npm run build && npm run api"
   },
   "eslintConfig": {
