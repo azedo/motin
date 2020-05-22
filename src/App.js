@@ -57,7 +57,7 @@ const App = () => {
     <div className="App">
       <Header>MOTIN</Header>
 
-      {error}
+      {error && <p>{error}</p>} 
 
       <div
         style={{
