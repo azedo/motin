@@ -40,7 +40,7 @@ const App = () => {
       try {
         let data = await (
           await fetch(
-            'https://api.airtable.com/v0/appJqUbXilt8QG73R/Fornecedores?view=Grid%20view&api_key=key3h0orLfvwRORrf'
+            `https://api.airtable.com/v0/appJqUbXilt8QG73R/Fornecedores?view=Grid%20view&api_key=${process.env.REACT_APP_AIRTABLE_KEY}`
           )
         ).json()
 
@@ -57,7 +57,7 @@ const App = () => {
     <div className="App">
       <Header>MOTIN</Header>
 
-      {error && <p>{error}</p>} 
+      {error && <p>{error}</p>}
 
       <div
         style={{
@@ -67,7 +67,7 @@ const App = () => {
           padding: '24px',
         }}
       >
-        {fornecedores.length > 0 &&
+        {fornecedores?.length > 0 &&
           fornecedores.map(({ id, fields }) => (
             <Card
               key={id}

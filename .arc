@@ -1,11 +1,11 @@
 @app
-begin-app
+Motin-app
 
 @static
 folder build
 
 @http
-get /api
+get /users
 
 @tables
 data
